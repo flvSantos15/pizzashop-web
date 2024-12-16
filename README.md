@@ -24,7 +24,7 @@ License
 
 Authors
 
-- (https://github.com/flvSantos15)
+- ([Flavio Santos](https://github.com/flvSantos15))
 
 Acknowledgments
 
@@ -33,6 +33,4 @@ Acknowledgments
 
 Issues and Feedback
 
-Report issues: ([link unavailable](https://github.com/flvSantos15/pizzashop-web/issues))
-
-Contact: [https://linkedin.com/in/flvsantos15/]
+Contact: [[linkedin](https://linkedin.com/in/flvsantos15/)]
