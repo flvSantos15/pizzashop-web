@@ -13,8 +13,11 @@ export function OrderTableFilter() {
   return (
     <form className="flex items-center gap-2">
       <span className="text-sm font-semibold">Filtros</span>
+
       <Input placeholder="ID do pedido" className="h-8 w-auto" />
+
       <Input placeholder="Nome do cliente" className="h-8 w-[320px]" />
+
       <Select>
         <SelectTrigger className="h-8 w-[180px]">
           <SelectValue defaultValue="all" placeholder="Status do pedido" />
@@ -30,13 +33,13 @@ export function OrderTableFilter() {
         </SelectContent>
       </Select>
 
-      <Button type="submit" variant="secondary">
+      <Button type="submit" variant="secondary" size="xs">
         <Search className="h-4w-4 mr-2" />
         Filtrar resultados
       </Button>
 
       <Button type="button" variant="outline" size="xs">
-        <X className="h-4w-4 mr-2" />
+        <X className="mr-2 h-4 w-4" />
         Remover resultados
       </Button>
     </form>

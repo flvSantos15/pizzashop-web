@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet-async";
 
 import { OrderTableRow } from "./order-table-row";
 import { OrderTableFilter } from "./order-table-filter";
+import { Pagination } from "@/components/pagination";
 
 export function Orders() {
   return (
@@ -43,6 +44,8 @@ export function Orders() {
               </TableBody>
             </Table>
           </div>
+
+          <Pagination pageIndex={0} totalCount={100} perPage={10} />
         </div>
       </div>
     </>
