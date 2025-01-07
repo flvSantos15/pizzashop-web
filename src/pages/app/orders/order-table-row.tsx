@@ -8,6 +8,7 @@ import { TableRow, TableCell } from "@/components/ui/table";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { OrderStatus } from "@/components/order-status";
 import { OrdeDetails } from "./order-details";
+import { useState } from "react";
 
 interface OrderTableRowProps {
   order: {
@@ -20,10 +21,12 @@ interface OrderTableRowProps {
 }
 
 export function OrderTableRow({ order }: OrderTableRowProps) {
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+
   return (
     <TableRow>
       <TableCell>
-        <Dialog>
+        <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="xs">
               <Search className="h-3 w-3" />
@@ -31,7 +34,7 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
             </Button>
           </DialogTrigger>
 
-          <OrdeDetails />
+          <OrdeDetails open={isDetailsOpen} orderId={order.orderId} />
         </Dialog>
       </TableCell>
 
@@ -51,7 +54,7 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
 
       <TableCell className="font-medium">{order.custumerName}</TableCell>
       <TableCell className="font-medium">
-        {order.total.toLocaleString("pt-BR", {
+        {(order.total / 100).toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
         })}
