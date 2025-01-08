@@ -5,18 +5,21 @@ PizzaShop
 
 Description
 
-Esse projeto tem como foco exxercitar tanto os conceitos sobre o React, quanto a comunicacao com APIs via requisicoes HTTP. Tambem iremos criar testes. Portanto, iremos desenvolver uma aplicacao de gerenciamento de uma pizzaria (dashboard de administrador).
+Esse projeto tem como foco exercitar tanto os conceitos sobre o React, quanto a comunicacao com APIs via requisicoes HTTP. Tambem iremos criar testes. Portanto, iremos desenvolver uma aplicacao de gerenciamento de uma pizzaria (dashboard de administrador).
 
 Features
 
-- [List other key features]
+- Cadastro de restaurantes
+- Gerenciamento de produtos
+- Gerenciamento de pedidos
+- Autenticação e autorização
 
 Tech Stack
 
 - Frontend: ReactJS, ViteJS
-- Styling: TailwindCSS, shadcm/ui
+- Styling: TailwindCSS, shadcn/ui
 - State Management: React-Hook-Form, React Query
-- Deployment: ??
+- Deployment: Vercel
 - Test: Vitest
 
 License
