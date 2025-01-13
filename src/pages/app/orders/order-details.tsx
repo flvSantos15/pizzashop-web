@@ -20,6 +20,7 @@ import {
 import { OrderStatus } from "@/components/order-status";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
+import { OrderDetailsSkeleton } from "./order-details-skeleton";
 
 interface OrdeDetailsProps {
   orderId: string;
@@ -44,7 +45,7 @@ export function OrdeDetails({ orderId, open }: OrdeDetailsProps) {
         <DialogDescription>Detalhes do pedido</DialogDescription>
       </DialogHeader>
 
-      {order && (
+      {order ? (
         <div className="space-y-6">
           <Table>
             <TableBody>
@@ -146,6 +147,8 @@ export function OrdeDetails({ orderId, open }: OrdeDetailsProps) {
             </TableFooter>
           </Table>
         </div>
+      ) : (
+        <OrderDetailsSkeleton />
       )}
     </DialogContent>
   );
