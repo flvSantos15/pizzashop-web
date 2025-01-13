@@ -24,6 +24,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Loader2 } from "lucide-react";
 
 interface RevenueChartProps {}
 
@@ -77,7 +78,7 @@ export function RevenueChart({}: RevenueChartProps) {
       </CardHeader>
 
       <CardContent>
-        {chartData && (
+        {chartData ? (
           <ResponsiveContainer width="100%" height={240}>
             <LineChart data={chartData} style={{ fontSize: 12 }}>
               <XAxis dataKey="date" tickLine={false} axisLine={false} dy={16} />
@@ -105,6 +106,10 @@ export function RevenueChart({}: RevenueChartProps) {
               <CartesianGrid vertical={false} className="stroke-muted" />
             </LineChart>
           </ResponsiveContainer>
+        ) : (
+          <div className="flex h-[240px] w-full items-center justify-center">
+            <Loader2 className="h-8 w-8 text-muted-foreground animate-spin" />
+          </div>
         )}
       </CardContent>
     </Card>
