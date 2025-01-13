@@ -66,15 +66,15 @@ export function OrderDetailsSkeleton() {
                 </TableCell>
 
                 <TableCell className="text-right">
-                <Skeleton className="h-5 w-3 ml-auto" />
+                  <Skeleton className="h-5 w-3 ml-auto" />
                 </TableCell>
 
                 <TableCell className="text-right">
-                <Skeleton className="h-5 w-12 ml-auto" />
+                  <Skeleton className="h-5 w-12 ml-auto" />
                 </TableCell>
 
                 <TableCell className="text-right">
-                <Skeleton className="h-5 w-12 ml-auto" />
+                  <Skeleton className="h-5 w-12 ml-auto" />
                 </TableCell>
               </TableRow>
             );
