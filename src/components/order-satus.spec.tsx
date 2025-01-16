@@ -49,7 +49,7 @@ describe('Order Status', () => {
   //   expect(statusText).toBeInTheDocument()
   //   expect(badgeElement).toHaveClass('bg-amber-400')
   // })
-
+  
   it('should display the right text when order status is delived', () => {
     const wrapper = render(<OrderStatus status="delivered" />)
 
